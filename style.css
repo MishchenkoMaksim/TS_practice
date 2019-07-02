@@ -1,0 +1,45 @@
+body{
+    margin: 0%;
+    height: 1300px;
+}
+
+.main{
+    position: relative;
+    top: 10px;
+}
+
+.greeting{
+    background-color: brown;
+    padding-left: 5%;
+    margin: 0%;
+}
+
+.question{
+    background-color: gray;
+    font-size: 1.2em;
+    padding-left: 1.1em;
+    margin: 0%;
+}
+
+.answer{
+    background-color: darkgray;
+    font-size: 1.1em;
+    margin: 0%;
+}
+
+.none{
+    display: none;
+}
+
+.show{
+    display: block;
+    background-color: red;
+    height: 150px;
+    position: fixed;
+    top: 41%;
+    left: 37%;
+}
+
+.closeBtn{
+    display: block;
+}
