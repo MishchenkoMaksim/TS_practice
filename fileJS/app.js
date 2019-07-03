@@ -19,14 +19,15 @@ window.onload = function () {
     arr.add(new constForArr('Сколько будет 28 / 2?', [14, 16, 18, 12], 14));
     arr.add(new constForArr('Сколько будет 7 + 33?', [50, 30, 41, 40], 40));
     arr.add(new constForArr('Сколько будет 11 * 5?', [55, 115, 26, 52], 55));
-    arr.add(new constForArr('Сколько будет 76 - 30?', [56, 36, 48, 60], 56));
-    arr.add(new constForArr('Сколько будет 5 * 6?', [38, 22, 28, 23], 36));
+    arr.add(new constForArr('Сколько будет 76 - 20?', [56, 36, 48, 60], 56));
+    arr.add(new constForArr('Сколько будет 4 * 7?', [38, 22, 28, 23], 28));
     arr.add(new constForArr('Сколько будет 28 - 11?', [15, 10, 17, 11], 17));
     arr.add(new constForArr('Сколько будет 18 + 33?', [51, 33, 42, 47], 51));
-    arr.add(new constForArr('Сколько будет 10 + 31?', [54, 46, 29, 57], 41));
+    arr.add(new constForArr('Сколько будет 10 + 36?', [54, 46, 29, 57], 46));
     arr.add(new constForArr('Сколько будет 1 * 0?', [1, 2, 0, -1], 0));
     let main = document.getElementById('main');
     let btn = document.createElement('button');
+    btn.setAttribute('class', 'chkBtn');
     let div_res = document.createElement('div');
     div_res.setAttribute('class', 'none');
     let btn_res = document.createElement('button');
@@ -52,7 +53,7 @@ window.onload = function () {
             ans_div.appendChild(inpt);
             ans_div.appendChild(label);
             main.appendChild(ans_div);
-            btn.innerHTML = 'check';
+            btn.innerHTML = 'Проверить';
             main.appendChild(btn);
             btn.addEventListener('click', function () {
                 if (inpt.checked) {
