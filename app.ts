@@ -26,7 +26,7 @@ window.onload = function(){
     arr.add(new constForArr('Сколько будет 1 * 0?', [1, 2, 0, -1], 0));
 
     let main = document.getElementById('main');
-    
+
     let btn = document.createElement('button');
     btn.setAttribute('class', 'chkBtn');
 
@@ -38,6 +38,7 @@ window.onload = function(){
     btn_res.setAttribute('class', 'closeBtn');
 
     let counter: number = 0;
+    let incorrect_count: number = 0;
 
     for(let i = 0; i < arr.questOfArr.length;i++){
         let quest_p = document.createElement('p');
@@ -73,8 +74,11 @@ window.onload = function(){
                     if(inpt.value == arr.questOfArr[i].answer){
                         inpt.value = 'block';
                         counter++;
-                    } 
+                    } else{
+                        incorrect_count++;
+                    }
                 }
+
 
                 if(counter > 2){
                     div_res.innerHTML = 'Вы прошли тест! У вас ' + counter + ' правильных ответов!';

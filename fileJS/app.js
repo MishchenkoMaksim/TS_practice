@@ -34,6 +34,7 @@ window.onload = function () {
     btn_res.innerHTML = 'Закрыть';
     btn_res.setAttribute('class', 'closeBtn');
     let counter = 0;
+    let incorrect_count = 0;
     for (let i = 0; i < arr.questOfArr.length; i++) {
         let quest_p = document.createElement('p');
         quest_p.innerHTML = [i + 1] + ") " + arr.questOfArr[i].question;
@@ -60,6 +61,9 @@ window.onload = function () {
                     if (inpt.value == arr.questOfArr[i].answer) {
                         inpt.value = 'block';
                         counter++;
+                    }
+                    else {
+                        incorrect_count++;
                     }
                 }
                 if (counter > 2) {
